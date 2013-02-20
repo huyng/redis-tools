@@ -18,8 +18,11 @@ def main(host):
         rd = redis.Redis(host=host, db=i)
         keys = rd.keys()
         for k in keys:
-           odbg = rd.debug_object(k)
-           print "size:%s db:%s key:%s" % (odbg.get('serializedlength'), i, k)
+            try:
+                odbg = rd.debug_object(k)
+            except:
+                continue
+            print "size:%s db:%-10s key:%s" % (odbg.get('serializedlength'), i, k)
 
     
 if __name__ == '__main__':
