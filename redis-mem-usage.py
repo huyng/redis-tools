@@ -20,7 +20,7 @@ def main(host):
         for k in keys:
             try:
                 odbg = rd.debug_object(k)
-            except:
+            except redis.exceptions.ResponseError:
                 continue
             print "size:%-10s db:%s key:%s" % (odbg.get('serializedlength'), i, k)
 
