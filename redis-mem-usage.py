@@ -3,10 +3,10 @@
 Display usage of redis db 
 
 Usage:
-    redis-mem-usage.py [-h HOST]
+    redis-mem-usage.py [--host HOST]
 
 Options:
-    -h HOST         # host
+    --host HOST         # host
    
 """
 import redis
