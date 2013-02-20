@@ -19,7 +19,7 @@ def main(host):
         keys = rd.keys()
         for k in keys:
            odbg = rd.debug_object(k)
-           print "size:%s db:%s key:%s" % (odbg.get('serializedLength'), i, k)
+           print "size:%s db:%s key:%s" % (odbg.get('serializedlength'), i, k)
 
     
 if __name__ == '__main__':
